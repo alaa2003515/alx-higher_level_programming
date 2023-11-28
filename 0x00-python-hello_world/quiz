@@ -1,0 +1,164 @@
+Question #0
+Who created Python?
+
+
+Guido van Rossum (*)
+
+
+Yukihiro Matsumoto
+
+
+Julien Barbier
+
+Question #1
+What does this command line print?
+
+>>> a = "Python is cool"
+>>> print(a[0:6])
+
+Python is
+
+
+Python is cool
+
+
+Pytho
+
+
+Python (*)
+
+Question #2
+What does this command line print?
+
+>>> a = "Python is cool"
+>>> print(a[:6])
+
+Python is
+
+
+is cool
+
+
+Python (*)
+
+
+Pytho
+
+Question #3
+What does this command line print?
+
+>>> print(f"{98} Battery street")
+
+9 Battery street
+
+
+8 Battery street
+
+
+f"98 Battery street"
+
+
+98 Battery street (*)
+
+Question #4
+What does this command line print?
+
+>>> a = "Python is cool"
+>>> print(a[4])
+
+o (*)
+
+
+h
+
+
+n
+
+
+P
+
+Question #5
+What does this command line print?
+
+>>> a = "Python is cool"
+>>> print(a[-2])
+
+o (*)
+
+
+Nothing
+
+
+l
+
+
+ol
+
+Question #6
+What does this command line print?
+
+>>> print(f"{98} Battery street, {'San Francisco'}")
+
+98 Battery street, San Francisco (*)
+
+
+San Francisco Battery street, 98
+
+
+8 Battery street, San
+
+
+“98 Battery street, San Francisco”
+
+Question #7
+What does this command line print?
+
+>>> a = "Python is cool"
+>>> print(a[7:-5])
+
+is (*)
+
+
+si
+
+
+Python
+
+
+nohtyP
+
+
+on
+
+Question #8
+What does this command line print?
+
+>>> a = "Python is cool"
+>>> print(a[7:])
+
+cool
+
+
+is cool (*)
+
+
+Python is
+
+
+Python i
+
+Question #9
+What does this command line print?
+
+>>> print("Holberton school")
+
+Holberton school (*)
+
+
+‘Holberton school’
+
+
+“Holberton school”
+
+
+Holberton
