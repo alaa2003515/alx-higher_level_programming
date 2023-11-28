@@ -1,0 +1,39 @@
+task 13
+_______
+This Python function magic_calculation(a, b) does the same computation:
+
+It receives two arguments, a and b.
+It calculates a raised to the power of b using the ** operator.
+Adds 98 to the result of a raised to the power of b.
+Returns the final result as the function's output.
+
+The given Python bytecode:
+
+python
+Copy code
+  3           0 LOAD_CONST               1 (98)
+              3 LOAD_FAST                0 (a)
+              6 LOAD_FAST                1 (b)
+              9 BINARY_POWER
+             10 BINARY_ADD
+             11 RETURN_VALUE
+explain:
+
+LOAD_CONST: Loads a constant onto the stack.
+
+LOAD_CONST 1 (98): Loads the constant integer 98 onto the stack.
+LOAD_FAST: Loads the value of a variable onto the stack.
+
+LOAD_FAST 0 (a): Loads the value of variable a onto the stack.
+LOAD_FAST 1 (b): Loads the value of variable b onto the stack.
+BINARY_POWER: Performs the exponentiation operation.
+
+BINARY_POWER: Raises the value of the second element to the power of the first element on the stack.
+BINARY_ADD: Adds the top two elements on the stack.
+
+BINARY_ADD: Adds the result from the exponentiation operation (top of the stack) to the constant 98 (next on the stack).
+RETURN_VALUE: Returns the top of the stack as the function's result.
+
+RETURN_VALUE: Returns the result of the addition as the function's output.
+
+________
