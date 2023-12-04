@@ -1,4 +1,6 @@
 #!/usr/bin/python3
 def print_list_integer(my_list=[]):
-    for x in my_list:
-        print("{}".format(x))
+    if not my_list:
+        return None
+    for x in reversed(my_list):
+        print("{:d}".format(x))
