@@ -1,69 +1,22 @@
-#include <stdlib.h>
-#include "lists.h"
+#include <Python.h>
 
 /**
- * list_len - computes the length of the liked list..
- * @h: a pointer to the list to iterato to.
- * Return: the number of nodes_______
+ * print_python_list_info -  list..
+ * @pi: a object_______
  */
-size_t list_len(const listint_t *h)
+void print_python_list_info(PyObject *p)
 {
-	const listint_t *tmp;
-	size_t i = 0;
+	PyListObject *py_list = NULL;
+	size_t len = 0, i = 0;
+	const char *py_type = NULL;
 
-	tmp = h;
-	if (tmp)
-		tmp = h;
-	while (tmp)
+	len = PyList_Size(p);
+	py_list = (PyListObject *)p;
+	printf("[*] Size of the Python List = %ld\n", len);
+	printf("[*] Allocated = %ld\n", (signed long)(py_list->allocated));
+	for  (; i < len; i++)
 	{
-		i++;
-		tmp = tmp->next;
+		py_type = Py_TYPE(py_list->ob_item[i])->tp_name;
+		printf("Element %ld: %s\n", i, py_type);
 	}
-	return (i);
-}
-
-/**
- * _chunk_ispal - Tests if a part of a list is palindrome.
- * @l: The list______
- * @start: The start
- * @end: The end
- * Return: 1 if the substring s[start..end] is palindrome.
- *	   0 otherwise.
- */
-int _chunk_ispal(listint_t **l, int start, int end)
-{
-	if (start == end)
-		return (1);
-	if (l[start]->n != l[end]->n)
-		return (0);
-	if (start < end + 1)
-		return (_chunk_ispal(l, start + 1, end - 1));
-	return (1);
-}
-
-/**
- * is_palindrome - checks if a singly linked list is a palindrome
- * @head: The head of the list
- * Return: 1 if the list is a palindrome. 0 otherwise_______
- */
-int is_palindrome(listint_t **head)
-{
-	int res = 1, i = 0, n;
-	listint_t **array_of_list;
-	listint_t *tmp;
-
-	if (head && *head)
-	{
-		n = list_len(*head);
-		array_of_list = malloc(n * sizeof(listint_t *));
-		tmp = *head;
-		while (tmp)
-		{
-			array_of_list[i++] = tmp;
-			tmp = tmp->next;
-		}
-		res = _chunk_ispal(array_of_list, 0, n - 1);
-		free(array_of_list);
-	}
-		return (res);
 }
