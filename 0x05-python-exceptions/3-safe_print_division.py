@@ -1,6 +1,3 @@
-#!/usr/bin/python3
-
-
 def safe_print_division(a, b):
     """
     divides two integers and prints the result
@@ -8,7 +5,7 @@ def safe_print_division(a, b):
     """
     try:
         res = a / b
-    except:
+    except ZeroDivisionError:  # Specify the exception type
         res = None
     finally:
         print("Inside result: {}".format(res))
