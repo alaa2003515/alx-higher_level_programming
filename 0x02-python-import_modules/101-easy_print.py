@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import printpic
+import easy_print
